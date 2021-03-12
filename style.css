@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+main {
+    font-size: 62.5%;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(0,189,255,0.8) 0%, rgba(30,208,167,0.8) 100%), url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.register, .login {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px rgba(63, 63, 63, 0.8);    
+}
+h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+.register-form, .login-form {
+    width: 100%;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input-group input {
+    font-size: 0.9rem;
+    margin: 1.5rem 0 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.input-group input:focus {
+    outline: none;
+    border: 1px solid rgb(49, 49, 49);
+}
+.input-group .btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(90deg, rgba(0,189,255,0.8) 0%, rgba(30,208,167,0.8) 100%);
+    transition: .3s;
+}
+.input-group .btn:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 8px grey;
+}
+.input-group .btn:focus {
+    outline: none;
+}
+.error {
+    height: 1rem;
+    font-size: 0.7rem;
+    color: rgb(214, 65, 27);
+}
