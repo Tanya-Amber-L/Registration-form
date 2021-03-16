@@ -9,12 +9,17 @@ main {
     font-family: "Montserrat", sans-serif;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.register-container, .login-container, .profile-banner {
     background-image: linear-gradient(90deg, rgba(0,189,255,0.8) 0%, rgba(30,208,167,0.8) 100%), url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.register-container, .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .register, .login {
     width: 40%;
@@ -72,4 +77,29 @@ h1 {
     height: 1rem;
     font-size: 0.7rem;
     color: rgb(214, 65, 27);
+}
+
+.profile-banner {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+.profile-content {
+    background-color: white;
+    box-shadow: 0 5px 10px grey;
+    padding: 3rem 5rem;
+    margin: 7rem;
+    margin-top: -5rem;
+    border-radius: 10px;
+}
+.profile-info-title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+.name, .signature {
+    padding: .5rem 0;
+    font-size: 1rem;
 }

@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 <body>
-    <main>
+    <main class="login-container">
         <section class="login">
             <h1>Login</h1>
             <form class="login-form" method="post" action="login.php">
@@ -18,8 +18,8 @@
                     <span class="error"><?= $nameError; ?></span>
                 </div>
                 <div class="input-group">
-                    <label>Password</label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" placeholder="Password *">
+                    <span class="error"><?= $passwordError; ?></span>
                 </div>
                 <div class="input-group">
                     <button type="submit" class="btn" name="login_user">Login</button>

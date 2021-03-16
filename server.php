@@ -1,8 +1,8 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 
 // define variables
@@ -90,6 +90,7 @@ if (isset($_POST['register_user'])) {
         $query->execute();
 
         $_SESSION['name'] = $name;
+        $_SESSION['signature'] = $signature;
         header('location: index.php');
     }
 }
@@ -110,14 +111,18 @@ if (isset($_POST['login_user'])) {
         $password = hash('sha256', testInput($_POST["password"]));
     }
 
-    if ($nameError == "") {
+    if ($nameError == "" && $passwordError == "") {
         $query = $db->prepare('SELECT * FROM users WHERE name="' . $name . '" AND password="' . $password . '"');
         $query->execute();
+        $result = $query->fetch();
+
         if ($query->rowCount() == 1) {
             $_SESSION['name'] = $name;
+            $_SESSION['signature'] = $result['signature'];
             header('location: index.php');
         } else {
-            print_r("No account on this name");
+            $nameError = "No account on this name";
+            // print_r("No account on this name");
         }
     }
 }

@@ -1,9 +1,9 @@
 <?php include('./server.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
-session_start(); 
+session_start();
 
 if (!isset($_SESSION['name'])) {
     $_SESSION['msg'] = "You must log in first";
@@ -14,7 +14,6 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['name']);
     header("location: login.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +26,19 @@ if (isset($_GET['logout'])) {
     <title>Registration form</title>
 </head>
 <body>
-    <h1><?php echo $_SESSION['name'] ?></h1>
+
+    <main>
+        <section class="profile">
+            <div class="profile-banner">
+                <h1>Your Profile</h1>
+            </div>
+            <div class="profile-content">
+                <h2 class="profile-info-title">Your profile information</h2>
+                <p class="name"><?= $_SESSION['name'] ?></p>
+                <p class="signature"><?= $_SESSION['signature'] ?></p>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>

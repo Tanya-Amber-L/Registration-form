@@ -1,7 +1,7 @@
 <?php include('./server.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ error_reporting(E_ALL);
     <title>Regiser</title>
 </head>
 <body>
-    <main>
+    <main class="register-container">
         <section class="register">
             <h1>Create an account</h1>
             <form class="register-form" method="post" action="register.php">
