@@ -56,7 +56,7 @@ if (isset($_POST['register_user'])) {
         $signature = "";
     } else {
         $signature = testInput($_POST["signature"]);
-        if (preg_match("/\*,\\,\{,\},\[,\]/",$signature)) {
+        if (preg_match("/^\*,\\,\{,\},\[,\]*$/",$signature)) {
             $signatureError = "Don't use weird character come on!";
         }
     }
