@@ -1,3 +1,5 @@
 # Registration-form
 Simple registration form with PHP and MySQL. <br>
-(Not deployed yet)
+
+### Deployment
+Project deployed on Heroku [here](https://registration-login-form.herokuapp.com/).
