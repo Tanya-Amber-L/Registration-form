@@ -56,7 +56,7 @@ if (isset($_POST['register_user'])) {
         $signature = "";
     } else {
         $signature = testInput($_POST["signature"]);
-        if (preg_match("/[\.\*\$\^]/",$signature)) {
+        if (preg_match("/[\.\*\$]/",$signature)) {
             $signatureError = "Don't use weird character come on!";
         }
         if (strlen($signature) > 250) {
@@ -128,7 +128,6 @@ if (isset($_POST['login_user'])) {
             header('location: index.php');
         } else {
             $nameError = "No account on this name";
-            // print_r("No account on this name");
         }
     }
 }
