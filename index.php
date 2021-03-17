@@ -6,11 +6,9 @@
 session_start();
 
 if (!isset($_SESSION['name'])) {
-    $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
-if (isset($_GET['logout-btn'])) {
-    session_destroy();
+if (isset($_GET['logout'])) {
     unset($_SESSION['name']);
     unset($_SESSION['signature']);
     header("location: login.php");
@@ -37,7 +35,7 @@ if (isset($_GET['logout-btn'])) {
                 <h2 class="profile-info-title">Your profile information</h2>
                 <p class="name"><?= $_SESSION['name'] ?></p>
                 <p class="signature"><?= $_SESSION['signature'] ?></p>
-                <button type="submit" class="logout-btn" name="logout_user">Log Out</button>
+                <a class="logout-btn" href="index.php?logout='1'">Log Out</a>
             </div>
         </section>
     </main>
