@@ -11,9 +11,12 @@ $name = $signature = $email = $password = "";
 
 
 //connection to the database
-$servername = "mysql:dbname=registration;host=localhost";
-$dbUsername = "admin";
-$dbPassword = "Admin0713?";
+// $servername = "mysql:dbname=registration;host=localhost";
+// $dbUsername = "admin";
+// $dbPassword = "Admin0713?";
+$servername = "mysql:dbname=".getenv("DB_NAME").";host=".getenv("SERVER");
+$dbUsername = getenv("DB_USERNAME");
+$dbPassword = getenv("DB_PASSWORD");
 
 try {
     $db = new PDO($servername, $dbUsername, $dbPassword, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
