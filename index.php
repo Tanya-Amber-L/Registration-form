@@ -1,7 +1,4 @@
 <?php include('./server.php');
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
 
 session_start();
 
@@ -35,7 +32,7 @@ if (isset($_GET['logout'])) {
                 <h2 class="profile-info-title">Your profile information</h2>
                 <p class="name"><?= $_SESSION['name'] ?></p>
                 <p class="signature"><?= $_SESSION['signature'] ?></p>
-                <a class="logout-btn" href="index.php?logout='1'">Log Out</a>
+                <a class="logout" href="index.php?logout='1'">Log Out</a>
             </div>
         </section>
     </main>

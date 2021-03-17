@@ -24,7 +24,7 @@
                 <div class="input-group">
                     <button type="submit" class="btn" name="login_user">Login</button>
                 </div>
-                <p>Not yet a member? <a href="./register.php">Register here</a></p>
+                <p class="go-to-register">Not yet a member? <a href="./register.php">Register here</a></p>
             </form>
         </section>
     </main>

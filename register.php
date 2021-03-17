@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Regiser</title>
+    <title>Register</title>
 </head>
 <body>
     <main class="register-container">
@@ -36,7 +36,7 @@
                 <div class="input-group">
                     <button type="submit" class="btn" name="register_user">Register</button>
                 </div>
-                <p>Alrealdy have an account? <a href="./login.php">Login here.</a></p>
+                <p class="go-to-login">Alrealdy have an account? <a href="./login.php">Login here.</a></p>
             </form>
         </section>
     </main>
