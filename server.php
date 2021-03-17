@@ -11,9 +11,6 @@ $name = $signature = $email = $password = "";
 
 
 //connection to the database
-// $servername = "mysql:dbname=registration;host=localhost";
-// $dbUsername = "admin";
-// $dbPassword = "Admin0713?";
 $servername = "mysql:dbname=".getenv("DB_NAME").";host=".getenv("SERVER");
 $dbUsername = getenv("DB_USERNAME");
 $dbPassword = getenv("DB_PASSWORD");
@@ -50,14 +47,17 @@ if (isset($_POST['register_user'])) {
         if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
             $nameError = "Only letters and white space allowed";
         }
+        if (strlen($name) > 50) {
+            $nameError = "Name is too long";
+        }
     }
 
     if (empty($_POST["signature"])) {
         $signature = "";
     } else {
         $signature = testInput($_POST["signature"]);
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$signature)) {
-            $signatureError = "Only letters and white space allowed";
+        if (!preg_match("/\*,\\,\{,\},\[,\]/",$signature)) {
+            $signatureError = "Don't use weird character come on!";
         }
     }
 
