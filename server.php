@@ -46,7 +46,7 @@ if (isset($_POST['register_user'])) {
     } else {
         $name = testInput($_POST["name"]);
         // name contains only letters & whitespaces ?
-        if (!preg_match("/^[a-zA-Z \'-]*$/",$name)) {
+        if (!preg_match("/^[a-zA-Z \'\\-]*$/",$name)) {
             $nameError = "Only letters and white space allowed!";
         }
         if (strlen($name) > 50) {
