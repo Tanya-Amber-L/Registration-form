@@ -36,6 +36,12 @@ function testInput($data) {
     return $data;
 }
 
+// FUNCTION TO SHOW RESULTS WITHOUT BACKSLASHES
+
+function showWithoutBackslashes($data) {
+    $data = stripslashes($data);
+}
+
 
 // REGISTER FORM
 
