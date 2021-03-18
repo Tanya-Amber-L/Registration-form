@@ -14,7 +14,7 @@
             <h1>Login</h1>
             <form class="login-form" method="post" action="login.php">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="Name *" value="<?php echo $name; ?>">
+                    <input type="text" name="name" placeholder="Name *" value="<?= showWithoutBackslashes($name); ?>">
                     <span class="error"><?= $nameError; ?></span>
                 </div>
                 <div class="input-group">

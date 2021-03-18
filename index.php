@@ -30,8 +30,8 @@ if (isset($_GET['logout'])) {
             </div>
             <div class="profile-content">
                 <h2 class="profile-info-title">Your profile information</h2>
-                <p class="name"><?php showWithoutBackslashes($_SESSION['name']) ?></p>
-                <p class="signature"><?php showWithoutBackslashes($_SESSION['signature']) ?></p>
+                <p class="name"><?= showWithoutBackslashes($_SESSION['name']) ?></p>
+                <p class="signature"><?= showWithoutBackslashes($_SESSION['signature']) ?></p>
                 <a class="logout" href="index.php?logout='1'">Log Out</a>
             </div>
         </section>

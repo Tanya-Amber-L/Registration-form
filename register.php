@@ -18,7 +18,7 @@
             <h1>Create an account</h1>
             <form class="register-form" method="post" action="register.php">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="Name *" value="<?php showWithoutBackslashes($name); ?>">
+                    <input type="text" name="name" placeholder="Name *" value="<?= showWithoutBackslashes($name); ?>">
                     <span class="error"><?= $nameError; ?></span>
                 </div>
                 <div class="input-group">
@@ -26,7 +26,7 @@
                     <span class="error"><?= $signatureError; ?></span>
                 </div>
                 <div class="input-group">
-                    <input type="email" name="email" placeholder="Email *" value="<?php echo $email; ?>">
+                    <input type="email" name="email" placeholder="Email *" value="<?= showWithoutBackslashes($email); ?>">
                     <span class="error"><?= $emailError; ?></span>
                 </div>
                 <div class="input-group">
