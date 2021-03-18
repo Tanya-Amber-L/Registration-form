@@ -40,6 +40,7 @@ function testInput($data) {
 
 function showWithoutBackslashes($data) {
     $data = stripslashes($data);
+    return $data;
 }
 
 
