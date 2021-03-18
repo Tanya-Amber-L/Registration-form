@@ -18,11 +18,11 @@
             <h1>Create an account</h1>
             <form class="register-form" method="post" action="register.php">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="Name *" value="<?php echo $name; ?>">
+                    <input type="text" name="name" placeholder="Name *" value="<?php showWithoutBackslashes($name); ?>">
                     <span class="error"><?= $nameError; ?></span>
                 </div>
                 <div class="input-group">
-                    <input type="text" name="signature" placeholder="Signature" value="<?= $signature; ?>">
+                    <input type="text" name="signature" placeholder="Signature" value="<?= showWithoutBackslashes($signature); ?>">
                     <span class="error"><?= $signatureError; ?></span>
                 </div>
                 <div class="input-group">
