@@ -31,7 +31,7 @@ if (isset($_GET['logout'])) {
             <div class="profile-content">
                 <h2 class="profile-info-title">Your profile information</h2>
                 <p class="name"><?= $_SESSION['name'] ?></p>
-                <p class="signature"><?= $_SESSION['signature'] ?></p>
+                <p class="signature"><?= stripslashes($_SESSION['signature']) ?></p>
                 <a class="logout" href="index.php?logout='1'">Log Out</a>
             </div>
         </section>
