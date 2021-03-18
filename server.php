@@ -30,7 +30,7 @@ function testInput($data) {
     $data = trim($data); 
     $data = stripslashes($data);
     // add slashes to special characters like apostrophe
-    // $data = mysql_real_escape_string($data);
+    $data = addslashes($data);
     // security check
     $data = htmlspecialchars($data);
     return $data;
