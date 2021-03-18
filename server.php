@@ -29,6 +29,8 @@ function testInput($data) {
     // cuts unnecessary tabs, spaces, newlines & remove backslashes 
     $data = trim($data); 
     $data = stripslashes($data);
+    // add slashes to special characters like apostrophe
+    $data = addslashes($data);
     // security check
     $data = htmlspecialchars($data);
     return $data;
