@@ -78,11 +78,14 @@ h1 {
     font-size: 0.7rem;
     color: rgb(214, 65, 27);
 }
-.go-to-login, .go-to-register, .logout, .delete {
-    text-decoration: none;
-    color: rgba(0,189,255);
+.go-to-login, .go-to-register, .logout, .delete, .delete-back-btn, .delete-yes-btn {
     padding: 2rem 0;
     font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0,189,255);
 }
 
 .profile-banner {
@@ -106,6 +109,24 @@ h1 {
     padding-bottom: 1rem;
 }
 .name, .signature {
-    padding: .5rem 0;
+    padding: 1rem 0;
     font-size: 1rem;
 }
+
+.delete-content {
+    text-align: center;
+}
+.delete-title {
+    font-size: 1.5rem;
+}
+.delete-actions {
+    display: flex;
+    justify-content: center;
+}
+.delete-back-btn, .delete-yes-btn {
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.delete-back-btn {background-color: rgba(0,189,255);}
+.delete-yes-btn {background-color: rgb(226, 59, 59);}
