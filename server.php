@@ -166,7 +166,7 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_GET['delete'])) {
-    killSessionAndRedirect();
     deleteAccount();
+    killSessionAndRedirect();
 }
 ?>
