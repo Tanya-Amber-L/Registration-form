@@ -155,18 +155,20 @@ function killSessionAndRedirect() {
 
 $test1 = "test";
 
-function deleteAccount() {
-    $query = $db->prepare('DELETE FROM users WHERE name="' . $test1 . '"');
-    $query->execute();
-    print_r($_SESSION['name']);
-}
+// function deleteAccount() {
+//     $query = $db->prepare('DELETE FROM users WHERE name="' . $test1 . '"');
+//     $query->execute();
+//     print_r($_SESSION['name']);
+// }
 
 if (isset($_GET['logout'])) {
     killSessionAndRedirect();
 }
 
 if (isset($_GET['delete'])) {
-    deleteAccount();
+    $query = $db->prepare('DELETE FROM users WHERE name="' . $test1 . '"');
+    $query->execute();
+    print_r($_SESSION['name']);
     killSessionAndRedirect();
 }
 ?>
