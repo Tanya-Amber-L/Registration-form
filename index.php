@@ -2,7 +2,6 @@
 
 session_start();
 
-
 //IF YOU'RE NOT CONNECTED, BACK TO LOGIN PAGE
 if (!isset($_SESSION['name'])) {
     header('location: login.php');
@@ -30,7 +29,7 @@ if (!isset($_SESSION['name'])) {
                 <p class="name"><?= showWithoutBackslashes($_SESSION['name']) ?></p>
                 <p class="signature"><?= showWithoutBackslashes($_SESSION['signature']) ?></p>
                 <a class="logout" href="index.php?logout='1'">Log Out</a>
-                <a class="delete" href="index.php?delete='1'">Delete Account</a>
+                <a class="delete" href="delete-account.php">Delete Account</a>
             </div>
         </section>
     </main>
