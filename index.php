@@ -33,6 +33,9 @@ if (!isset($_SESSION['name'])) {
 
                 <?php  if (isset($_GET['delete-verification'])) { ?>
                     <h3>Delete your account?</h3>
+                    <p>This action is definitive</p>
+                    <a href="index.php?delete-verification='0'">No, nevermind</a>
+                    <a href="index.php?delete='1'"></a>
                 <?php } ?>
             </div>
         </section>
