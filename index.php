@@ -2,6 +2,11 @@
 
 session_start();
 
+
+//IF YOU'RE NOT CONNECTED, BACK TO LOGIN PAGE
+if (!isset($_SESSION['name'])) {
+    header('location: login.php');
+}
 ?>
 
 <!DOCTYPE html>

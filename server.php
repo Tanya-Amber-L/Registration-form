@@ -145,11 +145,6 @@ if (isset($_POST['login_user'])) {
 }
 
 
-//IF YOU'RE NOT CONNECTED, BACK TO LOGIN PAGE
-
-if (!isset($_SESSION['name'])) {
-    header('location: login.php');
-}
 
 // IF U CLICK ON LOGOUT, KILL SESSIONS AND GO BACK TO LOGIN PAGE
 // DELETE ACCOUNT IF U CLICK ON DELETE AND GO BACK TO LOGIN PAGE
