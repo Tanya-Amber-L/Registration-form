@@ -153,11 +153,11 @@ function killSessionAndRedirect() {
     header("location: login.php");
 }
 
-function deleteAccount() {
-    // $query = $db->prepare('DELETE FROM users WHERE name="' . $name . '" AND password="' . $password . '"');
-    // $query->execute();
-    print_r($_SESSION['name']);
-}
+// function deleteAccount() {
+//     // $query = $db->prepare('DELETE FROM users WHERE name="' . $name . '" AND password="' . $password . '"');
+//     // $query->execute();
+//     print_r($_SESSION['name']);
+// }
 
 if (isset($_GET['logout'])) {
     killSessionAndRedirect();

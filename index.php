@@ -29,7 +29,11 @@ if (!isset($_SESSION['name'])) {
                 <p class="name"><?= showWithoutBackslashes($_SESSION['name']) ?></p>
                 <p class="signature"><?= showWithoutBackslashes($_SESSION['signature']) ?></p>
                 <a class="logout" href="index.php?logout='1'">Log Out</a>
-                <a class="delete" href="delete-account.php">Delete Account</a>
+                <a class="delete" href="index.php?delete-verification='1'">Delete Account</a>
+
+                <?php  if (isset($_GET['delete-verification'])) { ?>
+                    <h3>Delete your account?</h3>
+                <?php } ?>
             </div>
         </section>
     </main>
