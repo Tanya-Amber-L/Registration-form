@@ -144,8 +144,6 @@ if (isset($_POST['login_user'])) {
     }
 }
 
-
-
 // IF U CLICK ON LOGOUT, KILL SESSIONS AND GO BACK TO LOGIN PAGE
 // DELETE ACCOUNT IF U CLICK ON DELETE AND GO BACK TO LOGIN PAGE
 
@@ -162,6 +160,6 @@ if (isset($_GET['logout'])) {
 if (isset($_GET['delete'])) {
     $query = $db->prepare('DELETE FROM users WHERE name = '. $_SESSION['name'] );
     $query->execute();
-    killSessionAndRedirect();
+    // killSessionAndRedirect();
 }
 ?>
