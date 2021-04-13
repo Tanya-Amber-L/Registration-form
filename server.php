@@ -164,4 +164,9 @@ function deleteAccount() {
 if (isset($_GET['logout'])) {
     killSessionAndRedirect();
 }
+
+if (isset($_GET['delete'])) {
+    killSessionAndRedirect();
+    deleteAccount();
+}
 ?>
