@@ -160,7 +160,6 @@ function killSessionAndRedirect() {
     header("location: login.php");
 }
 
-
 if (isset($_GET['logout'])) {
     killSessionAndRedirect();
 }
@@ -170,7 +169,4 @@ if (isset($_GET['delete'])) {
     $query->execute();
     killSessionAndRedirect();
 }
-
-
-
 ?>

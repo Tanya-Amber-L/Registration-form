@@ -25,6 +25,7 @@ session_start();
                 <p class="name"><?= showWithoutBackslashes($_SESSION['name']) ?></p>
                 <p class="signature"><?= showWithoutBackslashes($_SESSION['signature']) ?></p>
                 <a class="logout" href="index.php?logout='1'">Log Out</a>
+                <a class="delete" href="index.php?delete='1'">Delete Account</a>
             </div>
         </section>
     </main>
