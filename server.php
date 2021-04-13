@@ -1,8 +1,8 @@
 <?php
 session_start();
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 
 // define variables
@@ -158,8 +158,9 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_GET['delete'])) {
-    $query = $db->prepare('DELETE FROM users WHERE name = '. $_SESSION['name'] );
-    $query->execute();
+    print_r($_SESSION['name']);
+    // $query = $db->prepare('DELETE FROM users WHERE name = '. $_SESSION['name'] );
+    // $query->execute();
     // killSessionAndRedirect();
 }
 ?>
