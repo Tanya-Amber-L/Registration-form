@@ -81,6 +81,9 @@ if (isset($_POST['register_user'])) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailError = "Invalid email format";
         }
+        if (strlen($email) > 250) {
+            $emailError = "Email is too long!";
+        }
     }
 
     if (empty($_POST["password"])) {
@@ -140,5 +143,34 @@ if (isset($_POST['login_user'])) {
         }
     }
 }
+
+
+//IF YOU'RE NOT CONNECTED, BACK TO LOGIN PAGE
+
+if (!isset($_SESSION['name'])) {
+    header('location: login.php');
+}
+
+// IF U CLICK ON LOGOUT, KILL SESSIONS AND GO BACK TO LOGIN PAGE
+// DELETE ACCOUNT IF U CLICK ON DELETE AND GO BACK TO LOGIN PAGE
+
+function killSessionAndRedirect() {
+    unset($_SESSION['name']);
+    unset($_SESSION['signature']);
+    header("location: login.php");
+}
+
+
+if (isset($_GET['logout'])) {
+    killSessionAndRedirect();
+}
+
+if (isset($_GET['delete'])) {
+    $query = $db->prepare('DELETE FROM users WHERE name = '. $_SESSION['name'] );
+    $query->execute();
+    killSessionAndRedirect();
+}
+
+
 
 ?>

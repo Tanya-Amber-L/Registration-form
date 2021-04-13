@@ -2,14 +2,6 @@
 
 session_start();
 
-if (!isset($_SESSION['name'])) {
-    header('location: login.php');
-}
-if (isset($_GET['logout'])) {
-    unset($_SESSION['name']);
-    unset($_SESSION['signature']);
-    header("location: login.php");
-}
 ?>
 
 <!DOCTYPE html>
