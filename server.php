@@ -166,9 +166,8 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_GET['delete'])) {
-    $query = $db->prepare('DELETE FROM users WHERE name="' . $test1 . '"');
+    $query = $db->prepare('DELETE FROM users WHERE name="' . $_SESSION['name'] . '"');
     $query->execute();
-    print_r($_SESSION['name']);
     killSessionAndRedirect();
 }
 ?>
