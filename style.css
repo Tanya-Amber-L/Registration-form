@@ -78,17 +78,9 @@ h1 {
     font-size: 0.7rem;
     color: rgb(214, 65, 27);
 }
-.go-to-login, .go-to-register, .logout, .delete, .delete-back-btn, .delete-yes-btn {
+.go-to-login, .go-to-register, .delete-back-btn, .delete-yes-btn {
     padding: 2rem 0;
     font-size: 0.9rem;
-}
-.logout, .delete {
-    padding: 2rem;
-    border: 1px solid grey;
-    margin: 1rem;
-}
-.logout:hover, .delete:hover {
-    background-color: rgba(128, 128, 128, 0.4);
 }
 a {
     text-decoration: none;
@@ -119,7 +111,20 @@ a {
     padding: 1rem 0;
     font-size: 1rem;
 }
-
+.profile-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+.logout, .delete {
+    font-size: 0.8rem;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 1rem;
+}
+.logout:hover, .delete:hover {
+    background-color: rgba(163, 163, 163, 0.2);
+}
 .delete-content {
     text-align: center;
 }
@@ -143,4 +148,6 @@ a {
     border-radius: 10px;
 }
 .delete-back-btn {background-color: rgba(0,189,255);}
+.delete-back-btn:hover{background-color: rgb(3, 169, 235);}
 .delete-yes-btn {background-color: rgb(250, 71, 71);}
+.delete-yes-btn:hover {background-color: rgb(231, 57, 57);}

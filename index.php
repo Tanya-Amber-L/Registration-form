@@ -28,8 +28,10 @@ if (!isset($_SESSION['name'])) {
                 <h2 class="profile-info-title">Your profile information</h2>
                 <p class="name"><?= showWithoutBackslashes($_SESSION['name']) ?></p>
                 <p class="signature"><?= showWithoutBackslashes($_SESSION['signature']) ?></p>
-                <a class="logout" href="index.php?logout='1'">Log Out</a>
-                <a class="delete" href="index.php?delete-verification='1'">Delete Account</a>
+                <div class="profile-actions">
+                    <a class="logout" href="index.php?logout='1'">Log Out</a>
+                    <a class="delete" href="index.php?delete-verification='1'">Delete Account</a>
+                </div>
             </div>
             <?php  if (isset($_GET['delete-verification'])) { ?>
                 <div class="delete-content">
