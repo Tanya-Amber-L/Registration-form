@@ -82,7 +82,14 @@ h1 {
     padding: 2rem 0;
     font-size: 0.9rem;
 }
-
+.logout, .delete {
+    padding: 2rem;
+    border: 1px solid grey;
+    margin: 1rem;
+}
+.logout:hover, .delete:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+}
 a {
     text-decoration: none;
     color: rgba(0,189,255);
@@ -117,16 +124,23 @@ a {
     text-align: center;
 }
 .delete-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+.delete-warn {
+    font-size: 1rem;
+    color: rgb(250, 71, 71);
 }
 .delete-actions {
     display: flex;
     justify-content: center;
 }
 .delete-back-btn, .delete-yes-btn {
-    padding: 1em;
-    border: 1px solid grey;
+    color: black;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
     border-radius: 10px;
 }
 .delete-back-btn {background-color: rgba(0,189,255);}
-.delete-yes-btn {background-color: rgb(226, 59, 59);}
+.delete-yes-btn {background-color: rgb(250, 71, 71);}
